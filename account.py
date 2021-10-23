@@ -1,10 +1,10 @@
 class Credentials:
 
     '''
-    class that generates new instances of account names and their credentials
+    class that generates new instances of new accounts and their credentials
     '''
 
-    account_list=[]
+    list_account=[]
 
     def __init__(self,account_name,username,password):
         '''
