@@ -22,6 +22,6 @@ class User:
 
     def save_user (self):
       """
-      A function that allows users to save their passwords
+      A function that allows users to save their object properties
       """
       User.users_list.append(self)
