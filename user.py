@@ -1,6 +1,3 @@
-from _typeshed import Self
-
-
 class User:
     """
     creation of a new user class instance
