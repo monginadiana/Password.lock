@@ -16,5 +16,22 @@ def save_new_person(user):
     Function to save the new person
     '''
     user.save_user()
-def
+def delete_new_person(user):
+    """
+    A function that deletes the added user in the list.
+    """
+    user.delete_user()
+def find_new_person(user):
+    """
+    A function that allows users to find a new person in the list.
+    """
+    user.find_username()
+
+def create_new_account(account_name,username,password):
+    '''
+    Function to create a new account
+    '''
+    new_account= Credentials(account_name,username,password)
+    return new_account
+
 
