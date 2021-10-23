@@ -10,3 +10,10 @@ def new_person (username,password):
     '''
     new_user = User(username,password)
     return new_user
+
+def save_new_person(user):
+    '''
+    Function to save the new person
+    '''
+    user.save_new_person()
+
