@@ -18,3 +18,10 @@ class Credentials:
         self.account_name=account_name
         self.username=username
         self.password=password
+
+    def save_account(self):
+
+        '''
+        save_account method saves accounts objects into the contact_list
+        '''
+        Credentials.list_account.append(self)
