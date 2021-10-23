@@ -16,3 +16,11 @@ class TestCredentials(unittest.TestCase):
         '''
 
         self.new_account = Credentials("instagram","monginadee","@Mongina")
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+
+        Credentials.list_account=[]
+
+
