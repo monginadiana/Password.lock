@@ -31,11 +31,11 @@ class Credentials:
         deletes save accounts from the account list
         '''
         Credentials.list_account.remove(self)
+        
     @classmethod
     def display_accounts(cls):
         '''
         This method displays saved credentials
         '''
-
         return cls.list_account
     
