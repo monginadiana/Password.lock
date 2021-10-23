@@ -34,4 +34,17 @@ def create_new_account(account_name,username,password):
     new_account= Credentials(account_name,username,password)
     return new_account
 
+def save_social_account(account):
+    '''
+    function to save a social account's credentials
+    '''
+    account.save_account()
+
+def delete_social_account(account):
+    '''
+    function to delete a saved social accounts
+    '''
+    account.delete_account()     
+
+
 

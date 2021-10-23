@@ -66,11 +66,18 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(len(Credentials.list_account),1)
     
     def test_display_accounts(self):
-        '''
+        """
         test method that returns a list of all accounts added
-        '''
+
+        """ 
         self.assertEqual(Credentials.display_accounts(),
         Credentials.list_account)
+
+    def display_accounts():
+        """
+        test method that returns a list of all accounts created in our list"
+        """
+        return Credentials.display_accounts()
 
 if __name__ == '__main__':
     unittest.main()
