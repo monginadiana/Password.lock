@@ -69,7 +69,8 @@ class TestCredentials(unittest.TestCase):
         '''
         test method that returns a list of all accounts added
         '''
-        self.assertEqual(Credentials.display_accounts(),Credentials.account_list)
+        self.assertEqual(Credentials.display_accounts(),
+        Credentials.list_account)
 
 if __name__ == '__main__':
     unittest.main()
