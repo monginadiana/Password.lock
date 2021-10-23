@@ -15,5 +15,6 @@ def save_new_person(user):
     '''
     Function to save the new person
     '''
-    user.save_new_person()
+    user.save_user()
+def
 
