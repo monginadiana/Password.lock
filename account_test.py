@@ -36,11 +36,37 @@ class TestCredentials(unittest.TestCase):
 
         '''
         test_save_account test case to test if the account object is saved into
-         the account list
+         the list_count
         '''
 
         self.new_account.save_account()
         self.assertEqual(len(Credentials.list_account),1)
+
+    def test_save_multiple_accounts(self):
+        '''
+        test_save_multiple_contact to check if we can save multiple accounts
+        objects to our list_account
+        '''    
+
+        self.new_account.save_account()
+        test_account = Credentials("Twitter","monginadiana","@blessing")
+        test_account.save_account()
+        self.assertEqual(len(Credentials.list_account),2) 
+    
+
+    def test_delete_account(self):
+        """
+        delete_user to check if the user has being deleted from the users_list
+        """
+        self.new_account.save_account()
+        new_account = Credentials("Instagram","monginadee","@Mongina") 
+        new_account.save_account()
+
+        self.new_account.delete_account()
+        self.assertEqual(len(Credentials.list_account),1)
+
+    
+
 if __name__ == '__main__':
     unittest.main()
     

@@ -25,3 +25,10 @@ class Credentials:
         save_account method saves accounts objects into the contact_list
         '''
         Credentials.list_account.append(self)
+        
+    def delete_account(self):
+        '''
+        deletes save accounts from the account list
+        '''
+        Credentials.list_account.remove(self)
+    
