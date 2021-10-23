@@ -55,7 +55,7 @@ def create_password(length=6):
     '''
     function that generates a password for you
     '''
-    characters = string.ascii_letters +string.digits + string.punctuation
+    characters = string.ascii_letters + string.digits + string.punctuation
     return ''.join(random.choice(characters) for i in range(length))
 
 
