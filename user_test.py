@@ -7,7 +7,6 @@ class TestUser(unittest.TestCase):
 
     Args:
         unittest.Testcase: class that helps in creating test cases
-
     '''
     def setUp(self):
         '''
@@ -26,13 +25,31 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_user.username,"Diana")
         self.assertEqual(self.new_user.password,"@Mongina")
-        
+
     def test_save_user(self):
         '''
         test_save_user to check if we can save our user object to our users_list
         '''
         self.new_user.save_user()
         self.assertEqual(len(User.users_list),1)
+
+    def test_delete_user(self):
+        """
+        delete_user to check if the user has being deleted from the users_list
+        """
+        self.new_user.save_user()
+        new_user = User("Diana","@Mongina") 
+        new_user.save_user()
+
+        self.new_user.delete_user()
+        self.assertEqual(len(User.users_list),1)
+
+    def test_find_username(self):
+        """
+        check whether the user account exists in the user accounts list
+        """
+        self.found_user = User.find_username("Diana")
+
 
         
 

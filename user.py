@@ -22,3 +22,16 @@ class User:
       A function that allows users to save their object properties
       """
       User.users_list.append(self)
+
+    def delete_user(self):
+        """
+        A function that allows users to delete their object properties from the list.
+        """
+        User.users_list.remove(self)
+
+    @classmethod
+    def find_username(cls, username):
+        """Find user by username"""
+        for user in cls.users_list:
+            if user.username == username:
+                return user
