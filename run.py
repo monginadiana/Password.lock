@@ -76,7 +76,7 @@ def main():
 
         if short_code == 'cc':
             print('Create your password locker account')
-            print("-"*10)
+            print("-"*20)
 
             print('Create your Username...')
             username = input()
@@ -138,6 +138,40 @@ def social_account():
   
     print('Use these short codes to navigate through')
     print ('\n')
+    while True:
+            print('asc - Add a new social account credentials')
+            print('esc - Add an existing social account credentials')
+            print('dsc - Display your available social accounts credentials')
+            print('del - Delete a saved account credentials')
+            print('ex - Exit from the account')
+
+            short_code = input().lower()
+
+            if short_code == 'asc':
+                print('Add a new social account credentials')
+                print("-"*20)
+
+                print('New Social Account Name ...')
+                accountname = input()
+
+                print('What is your username...')
+                username= input()
+                
+                print ('\n')
+                print('Use:')
+                print('gp - To get the password generated for you')
+                print('cp - To create your own password')
+
+                short_code2 = input().lower()
+                if short_code2 == 'gp':
+                    password = create_password()
+                    print(password)
+                elif short_code2 == 'cp':
+                    print('Input your password....')
+                    password = input()
+                else:
+                    print('Invalid short code')      
+
 
 if __name__ == '__main__':
 
