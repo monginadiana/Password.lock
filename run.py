@@ -86,17 +86,65 @@ def main():
 
             save_new_person(new_person(username,password))
 
-#             print ('\n')
-#             print(f'Congratulations {username} your account has been successfully created!')
+            print ('\n')
+            print(f'Congratulations {username} you have succcessfully created your account!')
 
-#             print ('\n')
-#             print('You can now log in using the username and password created')
+            print ('\n')
+            print('You can now log in using the username and password created')
 
-#             print('Username...')
-#             login_username = input()
+            print('Username...')
+            login_username = input()
 
-#             print('Password...')
-#             login_password = input()
+            print('Password...')
+            login_password = input()
+            if username != login_username or password != login_password:
+                print('Invalid Username or password!')
+                print('Re-enter your username....')
+                login_username = input()
+
+                print('Re- enter your password....')
+                login_password = input()
+
+            else :
+                    print ('\n')
+                    print(f'Hello {login_username}. Welcome to your password locker account!')
+                    print ('\n')
+                    save_social_account()
+        elif short_code == 'lg':
+             
+                print('Log in to your existing account')
+                print('Username....')
+                lg_username = input()
+
+                print('Password....')
+                lg_password = input()
+
+                if lg_username != 'Felista' and lg_password != 'Felista1#':
+                    print('The account does not exist, please create an account')
+                else:
+                    print(f'Hello {lg_username}. Welcome to your password locker account!')
+                    print ('\n')
+                    save_social_account()
+        elif short_code == 'ex':
+
+                print('Bye! You can come back later!')
+                break
+        else:
+                print('Wrong short code! Try again')
+        
+                 
+
+
+
+
+
+
+
+
+
+
+
+
 
 #             if username != login_username or password != login_password:
 #                 print('Invalid Username or password!')
