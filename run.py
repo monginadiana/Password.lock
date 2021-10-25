@@ -217,7 +217,7 @@ def social_account():
                 print('Bye! Come back soon!.')    
             else:
                 print('Wrong short code! Try again')
-            break
+            
  
 
 
