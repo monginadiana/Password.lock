@@ -127,14 +127,14 @@ def main():
                     social_account()
         elif short_code == 'ex':
 
-                print('Bye! Come back soon !')
+                print('Bye! Come back soon!')
                 break
         else:
                 print('Wrong short code! Try again')
 
 
 def social_account():
-    print('Now you can store your social accounts credentials here!')
+    print('Good news, you can easily store your social accounts credentials here!')
   
     print('Use these short codes to navigate through')
     print ('\n')
@@ -151,10 +151,10 @@ def social_account():
                 print('Add a new social account credentials')
                 print("-"*20)
 
-                print('New Social Account Name ...')
+                print('What is your new Social Account Name? ...')
                 accountname = input()
 
-                print('What is your username...')
+                print('What is your username in the Social Account Name...')
                 username= input()
                 
                 print ('\n')
@@ -170,7 +170,54 @@ def social_account():
                     print('Input your password....')
                     password = input()
                 else:
-                    print('Invalid short code')      
+                    print('Invalid short code')     
+                save_social_account(create_new_account(accountname,username,password))
+                   
+                print(f'{accountname} account credentials have been saved and stored')
+            
+            elif short_code == 'esc':
+                print('Add your existing account credentials')
+                print("-"*30)
+
+                print('Social Account Name ...')
+                accountname = input()
+
+                print('Username...')
+                username = input()
+
+                print('Password...')
+                password = input()
+
+                save_social_account(create_new_account(accountname,username,password))
+                print(f'{accountname} You account password has being saved and safely stored')
+                
+            elif short_code == 'dsc':
+                if display_accounts():
+                    print("Here is a list of all the accounts you  have saved in the application.") 
+                    print("-"*30)   
+
+                    for account  in display_accounts():
+                        print(
+                            f"{account.account_name} {account.username} {account.password}"
+                        )
+                    print('\n')    
+                else:
+                    print('\n')
+                    print('You do not have any social account credentials saved')       
+                    print('\n')
+
+            elif short_code == 'del':
+                print('Enter an account you want to delete?')
+
+                deleted_account = input()       
+                 
+                delete_social_account(deleted_account)
+
+            elif short_code == 'ex':
+                print('Bye! Come back soon!.')    
+            else:
+                print('Wrong short code! Try again')
+ 
 
 
 if __name__ == '__main__':
