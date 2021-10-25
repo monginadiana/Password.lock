@@ -209,14 +209,15 @@ def social_account():
             elif short_code == 'del':
                 print('Enter an account you want to delete?')
 
-                deleted_account = input()       
+                delete_account = input()       
                  
-                delete_social_account(deleted_account)
+                delete_social_account(delete_account)
 
             elif short_code == 'ex':
                 print('Bye! Come back soon!.')    
             else:
                 print('Wrong short code! Try again')
+            break
  
 
 
