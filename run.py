@@ -206,20 +206,22 @@ def social_account():
                     print('You do not have any social account credentials saved')       
                     print('\n')
 
-            elif short_code == 'del':
-                print('Enter an account you want to delete?')
-
-                delete_account = input()       
-                 
-                delete_social_account(delete_account)
+            elif short_code == 'del': 
+                            print("Enter the account name you want to delete")
+                            account_to_delete = input()
+                            if display_accounts():
+                                print(
+                                    f"Detail with media name '{account_to_delete}' has been deleted")
+                                print('\n')
+                            else:
+                                print(
+                                    f"Detail with media name '{account_to_delete}' does not exist")
 
             elif short_code == 'ex':
                 print('Bye! Come back soon!.')    
             else:
                 print('Wrong short code! Try again')
             
- 
-
 
 if __name__ == '__main__':
 
